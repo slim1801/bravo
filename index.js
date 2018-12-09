@@ -114,13 +114,13 @@ function renderCards(cardsEachRow) {
     const event = events[i];
     cardGroup.append(`
       <div class="card-container" style="padding-top:${(mod + 1) * 25}px">
-          <div class="card" style="width: 300px; height:350px;">
+          <a class="card" href="#" style="width: 300px; height:350px;">
                 ${renderCardPicture(event)}
               <div class="card-body">
                   <h5 class="card-title">${event.title}</h5>
                   <p class="card-text">${event.description}</p>
               </div>
-          </div>
+          </a>
       </div>`);
   }
 }
@@ -133,7 +133,7 @@ function renderSideWaysCards() {
   for (let i = 0; i < events.length; i++) {
     const event = events[i];
     cardContainer.append(`
-        <div class="card" style="display:flex;flex-direction:row;margin-bottom:20px;height:150px">
+        <a class="card" style="display:flex;flex-direction:row;margin-bottom:20px;height:150px">
             <div class="sideways-card-image" style="background-image: url('${
               event.imgUrlMobile2x
             }')">
@@ -149,9 +149,9 @@ function renderSideWaysCards() {
                 </div>
             </div>
             <div style="width:30px;display:flex;justify-content:center;align-items:center;">
-                <img src="./Assets/right_chevron.svg">
+                <img alt="right chevron" src="./Assets/right_chevron.svg">
             </div>
-        </div>`);
+        </a>`);
   }
 }
 
@@ -174,9 +174,7 @@ function renderCardPicture(event) {
             srcset="${event.imgUrlMobile}"
             media="(max-width: 300px)"
         />
-        <img class="card-img-top" src="${
-          event.imgUrlMobile
-        }" alt="Card image cap">
+        <img class="card-img-top" src="${event.imgUrlMobile}" alt="card image">
     </picture>
     `;
 }

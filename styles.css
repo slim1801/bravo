@@ -30,6 +30,9 @@ body {
   display: flex;
   justify-content: center;
 }
+.card-container > a {
+  color: black;
+}
 .sideways-card-image {
   width: 150px;
   background-repeat: no-repeat;
