@@ -1,3 +1,13 @@
+/*
+ *
+ * API had CORS disabled otherwise the code would have looked something like this
+ *  fetch('https://s3-ap-southeast-2.amazonaws.com/studiobravo/FED+Project/events.json')
+ *  .then(data => {
+ *      // Remaining code below
+ *   });
+ *
+ */
+
 const events = [
   {
     title: "Event Title 1",
